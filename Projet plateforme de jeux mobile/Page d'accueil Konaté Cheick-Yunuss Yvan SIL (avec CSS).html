@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Service – Plateforme de jeux</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ----- RESET ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1E1E1E;
+            color: #F5F5F5;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ----- HEADER ----- */
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: "Rajdhani", sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #3B82F6;
+        }
+
+        nav a {
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8B5CF6;
+        }
+
+        .logo {
+            font-family: "Rajdhani", sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #de3bff; /* Rouge vif */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+        /* ----- HERO SECTION ----- */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: linear-gradient(135deg, #1E1E1E, #222, #1E1E1E);
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-family: 'Rajdhani';
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .btn-primary {
+            padding: 14px 28px;
+            font-size: 18px;
+            border-radius: 8px;
+            color: white;
+            background-color: #3B82F6;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #8B5CF6;
+        }
+
+        /* ----- CARDS SECTION ----- */
+        .games-section {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .games-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            font-family: 'Rajdhani';
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #262626;
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.3s;
+            box-shadow: 0 0 8px rgba(0,0,0,0.4);
+            color: #fbfbfb;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 12px rgba(0,0,0,0.6);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px 0;
+            font-family: 'Rajdhani';
+            font-size: 22px;
+        }
+
+        .card p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+
+        .btn-small {
+            padding: 10px 16px;
+            background-color: #3B82F6;
+            border-radius: 6px;
+            font-size: 14px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-small:hover {
+            background-color: #8B5CF6;
+        }
+
+        /* ----- FOOTER ----- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            background-color: #181818;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Game Service</div>
+        <nav>
+            <a href="#games">Jeux</a>
+            <a href="A-propos.html">À propos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Découvrez des univers de jeu uniques</h2>
+        <p>Explorez, découvrez et plongez dans des jeux indépendants et créatifs.</p>
+        <a href="#games" class="btn-primary">Découvrir les jeux</a>
+    </section>
+
+    <!-- GAMES SECTION -->
+    <section class="games-section" id="games">
+        <h2 class="games-title">Jeux mis en avant</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="zelda 2.png" alt="Game 1">
+                <h3>The Legend of Zelda</h3>
+                <p>Un jeu d'exploration passionnant avec un univers immersif.</p>
+                <a href="#" class="btn-small">En savoir plus</a>
+            </div>
+
+            <div class="card">
+                <img src="dan the man.jpg" alt="Game 2">
+                <h3>Dan the Man</h3>
+                <p>Un jeu d’action rapide et intense, idéal pour les joueurs dynamiques.</p>
+                <a href="#" class="btn-small">En savoir plus</a>
+            </div>
+
+            <div class="card">
+                <img src="a dark room 2.png" alt="Game 3">
+                <h3>A dark room</h3>
+                <p>Un puzzle-game intelligent pour stimuler votre logique.</p>
+                <a href="#" class="btn-small">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        © 2025 Game Service — Tous droits réservés.
+    </footer>
+
+</body>
+</html>
